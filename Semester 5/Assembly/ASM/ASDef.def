@@ -1,0 +1,8 @@
+LIBRARY "Asm"
+EXPORTS
+
+floorDouble
+calcP
+linearWeights
+bilinearWeights
+interpolate

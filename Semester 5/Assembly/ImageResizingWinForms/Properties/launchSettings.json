@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ImageResizingWinForms": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
