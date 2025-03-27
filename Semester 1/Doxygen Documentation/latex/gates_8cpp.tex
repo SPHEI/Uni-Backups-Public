@@ -1,0 +1,83 @@
+\hypertarget{gates_8cpp}{}\doxysection{DCT/gates.cpp File Reference}
+\label{gates_8cpp}\index{DCT/gates.cpp@{DCT/gates.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}gates.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gates_8cpp_a67560403dce6ecc9051b2457bde2e098}{load\+\_\+data}} (string \&gatesname, unordered\+\_\+map$<$ int, \mbox{\hyperlink{structgate}{gate}} $>$ \&gates, vector$<$ int $>$ \&outputnodes, int \&inputamount)
+\item 
+void \mbox{\hyperlink{gates_8cpp_ace133d59d39876a818db85e813ffc76a}{startevaluation}} (string \&line, unordered\+\_\+map$<$ int, \mbox{\hyperlink{structgate}{gate}} $>$ \&gates, ofstream \&output, vector$<$ int $>$ \&outputnodes, int \&inputamount)
+\item 
+bool \mbox{\hyperlink{gates_8cpp_ab963438f632f32a2cd25cd2b04c04135}{evaluate\+\_\+gate}} (const int \&gatenum, unordered\+\_\+map$<$ int, \mbox{\hyperlink{structgate}{gate}} $>$ \&gates, ofstream \&output)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gates_8cpp_ab963438f632f32a2cd25cd2b04c04135}\label{gates_8cpp_ab963438f632f32a2cd25cd2b04c04135}} 
+\index{gates.cpp@{gates.cpp}!evaluate\_gate@{evaluate\_gate}}
+\index{evaluate\_gate@{evaluate\_gate}!gates.cpp@{gates.cpp}}
+\doxysubsubsection{\texorpdfstring{evaluate\_gate()}{evaluate\_gate()}}
+{\footnotesize\ttfamily bool evaluate\+\_\+gate (\begin{DoxyParamCaption}\item[{const int \&}]{gatenum,  }\item[{unordered\+\_\+map$<$ int, \mbox{\hyperlink{structgate}{gate}} $>$ \&}]{gates,  }\item[{ofstream \&}]{output }\end{DoxyParamCaption})}
+
+The function evaluates logic gates in order to find the value of a given node. 
+\begin{DoxyParams}{Parameters}
+{\em gatenum} & Number of the node that is being evaluated. \\
+\hline
+{\em gates} & Unordered map which holds gates and inputs. \\
+\hline
+{\em output} & Output file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns the value of the node. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Jakub Knapik 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{gates_8cpp_a67560403dce6ecc9051b2457bde2e098}\label{gates_8cpp_a67560403dce6ecc9051b2457bde2e098}} 
+\index{gates.cpp@{gates.cpp}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!gates.cpp@{gates.cpp}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily void load\+\_\+data (\begin{DoxyParamCaption}\item[{string \&}]{gatesname,  }\item[{unordered\+\_\+map$<$ int, \mbox{\hyperlink{structgate}{gate}} $>$ \&}]{gates,  }\item[{vector$<$ int $>$ \&}]{outputnodes,  }\item[{int \&}]{inputamount }\end{DoxyParamCaption})}
+
+The function loads data from files. 
+\begin{DoxyParams}{Parameters}
+{\em gatesname} & Name of the input file with input gates. \\
+\hline
+{\em gates} & Unordered map which holds gates and inputs. \\
+\hline
+{\em outputnodes} & Vector which holds output nodes. \\
+\hline
+{\em inputamount} & Counter holding the number of input nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Jakub Knapik 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{gates_8cpp_ace133d59d39876a818db85e813ffc76a}\label{gates_8cpp_ace133d59d39876a818db85e813ffc76a}} 
+\index{gates.cpp@{gates.cpp}!startevaluation@{startevaluation}}
+\index{startevaluation@{startevaluation}!gates.cpp@{gates.cpp}}
+\doxysubsubsection{\texorpdfstring{startevaluation()}{startevaluation()}}
+{\footnotesize\ttfamily void startevaluation (\begin{DoxyParamCaption}\item[{string \&}]{line,  }\item[{unordered\+\_\+map$<$ int, \mbox{\hyperlink{structgate}{gate}} $>$ \&}]{gates,  }\item[{ofstream \&}]{output,  }\item[{vector$<$ int $>$ \&}]{outputnodes,  }\item[{int \&}]{inputamount }\end{DoxyParamCaption})}
+
+The function starts the evaluation of the output nodes, and outputs the result. 
+\begin{DoxyParams}{Parameters}
+{\em line} & Values for input nodes. \\
+\hline
+{\em gates} & Unordered map which holds gates and inputs. \\
+\hline
+{\em output} & Output file. \\
+\hline
+{\em outputnodes} & Vector which holds output nodes. \\
+\hline
+{\em inputamount} & Counter holding the number of input nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Jakub Knapik 
+\end{DoxyAuthor}

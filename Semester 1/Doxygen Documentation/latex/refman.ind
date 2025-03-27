@@ -1,0 +1,37 @@
+\begin{theindex}
+
+  \item {DCT/gates.cpp}, \hyperpage{7}
+  \item {DCT/gates.h}, \hyperpage{9}, \hyperpage{11}
+  \item {DCT/main.cpp}, \hyperpage{11}
+
+  \indexspace
+
+  \item {evaluate\_gate}
+    \subitem {gates.cpp}, \hyperpage{7}
+    \subitem {gates.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {gate}, \hyperpage{5}
+  \item {gates.cpp}
+    \subitem {evaluate\_gate}, \hyperpage{7}
+    \subitem {load\_data}, \hyperpage{8}
+    \subitem {startevaluation}, \hyperpage{8}
+  \item {gates.h}
+    \subitem {evaluate\_gate}, \hyperpage{9}
+    \subitem {load\_data}, \hyperpage{10}
+    \subitem {startevaluation}, \hyperpage{10}
+
+  \indexspace
+
+  \item {load\_data}
+    \subitem {gates.cpp}, \hyperpage{8}
+    \subitem {gates.h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {startevaluation}
+    \subitem {gates.cpp}, \hyperpage{8}
+    \subitem {gates.h}, \hyperpage{10}
+
+\end{theindex}

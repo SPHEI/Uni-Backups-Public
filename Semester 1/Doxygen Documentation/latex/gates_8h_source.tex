@@ -1,0 +1,25 @@
+\hypertarget{gates_8h_source}{}\doxysection{gates.\+h}
+\label{gates_8h_source}\index{DCT/gates.h@{DCT/gates.h}}
+\mbox{\hyperlink{gates_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{4 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef gates\_h}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define gates\_h}}
+\DoxyCodeLine{8 \textcolor{keyword}{enum} gatename\{IN,AND,NAND,OR,NOR,XOR,XNOR,NEG\};}
+\DoxyCodeLine{9 \textcolor{keyword}{struct }\mbox{\hyperlink{structgate}{gate}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} inx;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} iny;}
+\DoxyCodeLine{13     gatename name;}
+\DoxyCodeLine{14 \};}
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{gates_8h_a67560403dce6ecc9051b2457bde2e098}{load\_data}}(\textcolor{keywordtype}{string}\& gatesname, unordered\_map<int, gate>\& gates, vector<int>\& outputnodes, \textcolor{keywordtype}{int}\& inputamount);}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{gates_8h_ace133d59d39876a818db85e813ffc76a}{startevaluation}}(\textcolor{keywordtype}{string}\& line, unordered\_map<int, gate>\& gates,ofstream\& output, vector<int>\& outputnodes, \textcolor{keywordtype}{int}\& inputamount);}
+\DoxyCodeLine{39 \textcolor{keywordtype}{bool} \mbox{\hyperlink{gates_8h_ab963438f632f32a2cd25cd2b04c04135}{evaluate\_gate}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& gatenum,unordered\_map<int, gate>\& gates, ofstream\& output);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GATES\_H}}
+
+\end{DoxyCode}
