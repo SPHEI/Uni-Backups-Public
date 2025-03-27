@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PESEL Extraction</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="peselView" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>721</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <widget class="QListWidget" name="peselList">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>371</width>
+       <height>491</height>
+      </rect>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>5</y>
+       <width>371</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID                        PESEL                BIRTH DATE     GENDER       CTRL_NUM</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddPesel">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>110</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Pesel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddFromFile">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>140</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Pesels From File</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ExportPesels">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>210</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Export Pesels To File</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BackButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>91</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Database</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>430</y>
+       <width>251</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search Database</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="BaseLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>6</y>
+       <width>321</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Default</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="singlePesel">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>110</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>PESEL</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="fromFile">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>140</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>FILE NAME</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="toFile">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>210</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>FILE NAME</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="validCheck">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>170</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Only Add If Valid</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="searchDate">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>300</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="searchDaterange">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>360</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="searchDaterange_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>390</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="ageRange">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>330</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Age Range</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="age">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>270</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Age</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="gender">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>300</y>
+       <width>69</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>M</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>F</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>270</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gender</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="mustValid">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>360</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Must Be Valid</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="mustInvalid">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>390</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Must Be Invalid</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>360</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>From</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>390</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>To</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>300</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Date</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <zorder>ExportPesels</zorder>
+    <zorder>label</zorder>
+    <zorder>AddPesel</zorder>
+    <zorder>AddFromFile</zorder>
+    <zorder>peselList</zorder>
+    <zorder>BackButton</zorder>
+    <zorder>pushButton</zorder>
+    <zorder>pushButton_2</zorder>
+    <zorder>BaseLabel</zorder>
+    <zorder>singlePesel</zorder>
+    <zorder>fromFile</zorder>
+    <zorder>toFile</zorder>
+    <zorder>validCheck</zorder>
+    <zorder>searchDate</zorder>
+    <zorder>searchDaterange</zorder>
+    <zorder>searchDaterange_2</zorder>
+    <zorder>ageRange</zorder>
+    <zorder>age</zorder>
+    <zorder>gender</zorder>
+    <zorder>label_2</zorder>
+    <zorder>mustValid</zorder>
+    <zorder>mustInvalid</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_5</zorder>
+   </widget>
+   <widget class="QWidget" name="baseView" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>461</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>40</y>
+       <width>141</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Create New</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="dbaseList">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>281</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="newBaseName">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Name</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>100</y>
+       <width>141</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>280</y>
+       <width>141</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="peselSearch">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>210</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>11</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>PESEL</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="peselCombo">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>240</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>=</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QSpinBox" name="peselAmount">
+     <property name="geometry">
+      <rect>
+       <x>361</x>
+       <y>240</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>320</y>
+       <width>141</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search History</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>500</y>
+       <width>141</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Log Out</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="historyView" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>721</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="searchHistory">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>611</width>
+       <height>491</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>510</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="userName">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>611</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search history of user:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>721</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <widget class="QLineEdit" name="userInput">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>230</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>270</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Log In</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>540</y>
+      <width>721</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="feedback">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>721</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>BackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>peselView</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>560</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>716</x>
+     <y>354</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>baseView</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dbaseList</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>baseView</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>410</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dbaseList</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>peselView</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>529</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>historyView</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1085</x>
+     <y>570</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>baseView</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>historyView</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1084</x>
+     <y>570</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>baseView</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>baseView</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>507</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>271</x>
+     <y>557</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>402</x>
+     <y>514</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>750</x>
+     <y>640</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>750</x>
+     <y>640</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>baseView</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>228</x>
+     <y>548</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

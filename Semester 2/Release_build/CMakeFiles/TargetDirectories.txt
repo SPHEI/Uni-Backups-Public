@@ -1,0 +1,9 @@
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/Pesels_final.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/edit_cache.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/rebuild_cache.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/list_install_components.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/install.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/install/local.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/install/strip.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/Pesels_final_autogen_timestamp_deps.dir
+C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release/CMakeFiles/Pesels_final_autogen.dir

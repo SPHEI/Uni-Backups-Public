@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f8f0318b606bb3d25cd5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Pesels_final",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Pesels_final::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pesels_final-Release-8c54102fbde8c9be4596.json",
+					"name" : "Pesels_final",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pesels_final_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pesels_final_autogen-Release-10fd89f4deaa9856f68a.json",
+					"name" : "Pesels_final_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Pesels_final_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Pesels_final_autogen_timestamp_deps-Release-4f5382fdeb3229140581.json",
+					"name" : "Pesels_final_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/build-Pesels_final-Desktop_Qt_6_5_0_MinGW_64_bit-Release",
+		"source" : "C:/Users/Jaycoube/source/repos/tests/Pesel_Widgets_Final/Pesels_final"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
